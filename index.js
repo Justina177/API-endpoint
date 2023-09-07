@@ -1,12 +1,13 @@
 const express = require('express');
+const env = require("dotenv")
 
-const PORT = 8000
+const port = process.env.PORT || 8000
 const app  = express ();
 app.use(express.json());
 
-app.listen(PORT, () => {
-    console.log("Server Running on PORT:8000");
-});
+app.listen(port, () => 
+    console.log(`Server Running on port ${port}!`)
+);
 
 app.get("/api/justy/backend", (req, res) => {
    res.status(200)
