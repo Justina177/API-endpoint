@@ -3,6 +3,11 @@
   "version": "1.0.0",
   "description": "api endpoint",
   "main": "index.js",
+  "type": "module",
+  "exports": {
+    "./index.js": "./index.js"
+  },
+  
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon index.js"
